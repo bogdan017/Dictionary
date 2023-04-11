@@ -1,0 +1,58 @@
+body {
+    background-color: bisque;
+}
+
+.dict-container {
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#form1 {
+    border: 2px black solid;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+label {
+    margin-right: 5px;
+}
+
+#word-box {
+    width: 100%;
+    height: 30%;
+    border: 2px solid black;
+}
+
+.card-header {
+	text-align: center;
+	font-family: fantasy;
+	padding-top: 15px;
+	color: black;
+	background-color: bisque;
+	font-size: 36px;
+
+}
+
+
+.card-body {
+	background-color: grey;
+	text-align: center;
+	font-family: fantasy;
+}
+
+.btn-primary {
+	background-color: black;
+}
+
+.card {
+	background-color: azure;
+}
+
+button.btn-primary {
+	text-align: center;
+    margin-left: 5px;
+}
