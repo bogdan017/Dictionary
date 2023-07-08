@@ -17,12 +17,12 @@
         <div class = "card-header">Dictionary</div>
         <div class = "card-body">
       <form>
-        <div id = "form1">
+        <div id = "form-container">
           <label for="word">Word:</label>
           <input type="text" id="word" name="word">
           <button type="button" onclick="saveWord()" class = "btn btn-primary">Add to dictionary</button>
         </div>
-        <div id = "form1">
+        <div id = "form-container">
         <label for="search">Search:</label>
         <input type="text" id="search" name="search">
         <button type="button" onclick="searchWord()" class = "btn btn-primary">Search word</button>
@@ -32,8 +32,8 @@
         </div>
       </form>
       </div>
-      <div id="word-box"></div>
-      <div id="result"></div>
+      <div id="word-box">Word-box:</div>
+      <div id="result">Search result:</div>
     </div>
     </div>
   </body>

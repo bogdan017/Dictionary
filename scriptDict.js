@@ -29,9 +29,9 @@ function searchWord() {
   // verifică dacă cuvântul se află în dicționar si afiseaza un mesaj corespunzator
   let index = dictionary.indexOf(search);
   if (index >= 0) {
-    alert(document.getElementById("result").innerHTML = search + " se află în dicționar.");
+    document.getElementById("result").innerHTML += "<p>" + search + " se află în dicționar." + "</p>";
   } else {
-    alert(document.getElementById("result").innerHTML = search + " nu se află în dicționar.");
+    document.getElementById("result").innerHTML += "<p>" +  search + " nu se află în dicționar." + "</p>";
   }
   
   // șterge textul introdus de utilizator din formular
