@@ -1,10 +1,10 @@
 const dictionary = [];
 
 function saveWord() {
-  //preia cuvântul introdus de utilizator
+  //get the word from the user
   let word = document.getElementById("word").value;
 
-  //adaugă cuvântul în dicționar daca acesta nu exista deja
+  //add the word if it does not exist
   for(let i = 0; i < dictionary.length; ++i) {
     if(dictionary[i] === word) {
       alert("Acest cuvant a fost introdus deja! Introdu alt cuvant!")
@@ -14,26 +14,32 @@ function saveWord() {
   }
   dictionary.push(word);
 
-  // șterge textul introdus de utilizator din formular
+  //reset the user input
   document.getElementById("word").value = "";
 
-  // afișează cuvântul în interiorul box-ului
+  //display the word within the box
   let wordBox = document.getElementById("word-box");
   wordBox.innerHTML += "<p>" + word + "</p>";
 }
 
 function searchWord() {
-  // preia cuvântul introdus de utilizator
+  // get the word from the user
   let search = document.getElementById("search").value;
 
-  // verifică dacă cuvântul se află în dicționar si afiseaza un mesaj corespunzator
-  let index = dictionary.indexOf(search);
+  // check if the word exists and if so display a message
+  let index = -1;
+  for (let i = 0; i < dictionary.length; i++) {
+    if(dictionary[i] === search) {
+      index = i;
+      break;
+    }
+  }
   if (index >= 0) {
     document.getElementById("result").innerHTML += "<p>" + search + " se află în dicționar." + "</p>";
   } else {
     document.getElementById("result").innerHTML += "<p>" +  search + " nu se află în dicționar." + "</p>";
   }
   
-  // șterge textul introdus de utilizator din formular
+  //reset the user input
   document.getElementById("search").value = "";
 }
