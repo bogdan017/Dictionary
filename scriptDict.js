@@ -24,20 +24,20 @@ function saveWord() {
 
 function searchWord() {
   // get the word from the user
-  let search = document.getElementById("search").value;
+  let searchWord = document.getElementById("search").value;
 
   // check if the word exists and if so display a message
   let index = -1;
   for (let i = 0; i < dictionary.length; i++) {
-    if(dictionary[i] === search) {
+    if(dictionary[i] === searchWord) {
       index = i;
       break;
     }
   }
   if (index >= 0) {
-    document.getElementById("result").innerHTML += "<p>" + search + " se află în dicționar." + "</p>";
+    alert(searchWord + " exists in the dictionary");
   } else {
-    document.getElementById("result").innerHTML += "<p>" +  search + " nu se află în dicționar." + "</p>";
+    alert(searchWord + " does not exist in the dictionary");
   }
   
   //reset the user input
